@@ -24,9 +24,21 @@ city
 state
 country
 
+## Getting Started
+
+Download or clome the repository
+
+Run `npm install` to install dependancies
+
+Requires postgreSQL installed on your machine.Get it here `https://www.postgresql.org/` and pgadmin if you like `https://www.pgadmin.org/`
+
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a angular dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+In another terminal
+
+Run `npm run dev` for the express dev server. Navigate to `http://localhost:3000/api/contacts`
 
 ## Build
 
