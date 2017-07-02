@@ -1,6 +1,28 @@
-# MEAN Contacts Manager
+# PEAN Contacts Manager
 
+PostgreSQL,Express,Angular and Node web application to manage your contacts featuring a REST API and full CRUD functionality.
 
+## Project Details
+
+### REST API built from the ground up
+
+#### API End Points
+
+* Get - `/api/contacts` - view all your contacts and a few details about them
+* Get - `/api/contacts/contact/:id` - view all the details about a contact 
+* Post - `/api/contacts` - Create a new contact
+* Put - `/api/contacts/contact/:id` - Update a contact's details
+* Delete - `/api/contacts/contact/:id` - Delete a contacts
+
+### Contact Details
+
+name
+email
+home, work and mobile phone
+street address
+city
+state
+country
 
 ## Development server
 
