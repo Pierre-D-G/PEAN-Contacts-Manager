@@ -41,3 +41,20 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
+## TODO
+
+### Backend
+
+* Routes
+  - ~~Get - `/api/contacts` - view all your contacts and a few details about them~~
+  - ~~Get - `/api/contacts/contact/:id` - view all the details about a contact~~ 
+  - Post - `/api/contacts` - Create a new contact
+  - Put - `/api/contacts/contact/:id` - Update a contact's details
+  - Delete - `/api/contacts/contact/:id` - Delete a contacts
+
+### Front-End
+
+* Components 
+
+* Http Service
+

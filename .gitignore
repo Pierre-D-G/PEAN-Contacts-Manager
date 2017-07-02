@@ -42,3 +42,4 @@ testem.log
 Thumbs.db
 
 config.js
+proxy.config.json
