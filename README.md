@@ -12,7 +12,7 @@ PostgreSQL,Express,Angular and Node web application to manage your contacts feat
 * Get - `/api/contacts/contact/:id` - view all the details about a contact 
 * Post - `/api/contacts` - Create a new contact
 * Put - `/api/contacts/contact/:id` - Update a contact's details
-* Delete - `/api/contacts/contact/:id` - Delete a contacts
+* Delete - `/api/contacts/contact/:id` - Delete a contact
 
 ### Contact Details
 
@@ -62,7 +62,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
   - ~~Get - `/api/contacts/contact/:id` - view all the details about a contact~~ 
   - Post - `/api/contacts` - Create a new contact
   - Put - `/api/contacts/contact/:id` - Update a contact's details
-  - Delete - `/api/contacts/contact/:id` - Delete a contacts
+  - Delete - `/api/contacts/contact/:id` - Delete a contact
 
 ### Front-End
 
@@ -73,4 +73,9 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 * Http Service
  - Service to connect to API
+  * API Call Get - `/api/contacts` - view all your contacts and a few details about them
+  * API Call Get - `/api/contacts/contact/:id` - view all the details about a contact 
+  * API Call Post - `/api/contacts` - Create a new contact
+  * API Call Put - `/api/contacts/contact/:id` - Update a contact's details
+  * API Call Delete - `/api/contacts/contact/:id` - Delete a contact
 
