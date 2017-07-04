@@ -67,6 +67,10 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ### Front-End
 
 * Components 
+ - Contacts Component - View all contacts
+ - Contact Component - View a contacts details
+ - Form Component - Form to add,edit and delete a contact
 
 * Http Service
+ - Service to connect to API
 
