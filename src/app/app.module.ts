@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 import { ContactsAPIService } from './services/contacts-api.service';
 
@@ -13,7 +14,8 @@ import { ContactsAPIService } from './services/contacts-api.service';
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsComponent
+    ContactsComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
