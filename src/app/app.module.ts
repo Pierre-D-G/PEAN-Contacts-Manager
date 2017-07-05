@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http'
 
 import { AppRoutingModule } from './app.routing';
 
@@ -16,6 +17,7 @@ import { ContactsAPIService } from './services/contacts-api.service';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AppRoutingModule
   ],
   providers: [ContactsAPIService],

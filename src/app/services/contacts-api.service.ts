@@ -10,7 +10,7 @@ export class ContactsAPIService {
   constructor(private _http: Http) { }
 
   getContacts = () => {
-    this.apiURL = '/api/contacts';
+    this.apiURL = 'http://localhost:3000/api/contacts';
     return this._http.get(this.apiURL)
               .map(res => res.json())
   }
