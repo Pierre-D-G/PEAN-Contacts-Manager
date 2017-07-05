@@ -1,0 +1,12 @@
+.menu{
+  background-color: #59A96A;
+  font-size: 1.25em;
+}
+
+.menu > a {
+  color: #fff;
+}
+
+.menu > a:hover{
+  background-color: #B4E7CE;
+}
