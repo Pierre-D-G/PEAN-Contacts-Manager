@@ -23,7 +23,8 @@ module.exports = {
   testData: function () {
     pool.query("INSERT INTO contacts_manager(contact) VALUES ($1), ($2), ($3), ($4), ($5)", [{
       "avatar_url": "http://www.st2299.com/data/wallpapers/64/wp-image-57712107.jpg",
-      "name": "Patrick Dessler",
+      "first_name": "Patrick",
+      "last_name": "Dessler",
       "email": "patrick.dess@gmail.com",
       "company": "Pat Brewery LLC",
       "phone_numbers": {
@@ -40,7 +41,8 @@ module.exports = {
     },
     {
       "avatar_url": "http://www.st2299.com/data/wallpapers/64/wp-image-58872992.jpg",
-      "name": "Kurtis Karner",
+      "first_name": "Kurtis",
+      "last_name": "Karner",
       "email": "k.karner@gmail.com",
       "company": "Karoil LLC",
       "phone_numbers": {
@@ -57,7 +59,8 @@ module.exports = {
     },
     {
       "avatar_url": "http://www.st2299.com/data/wallpapers/65/wp-image-58225497.jpg",
-      "name": "Jeanette Funke",
+      "first_name": "Jeanette",
+      "last_name": "Funke",
       "email": "jeanette.funke@gmail.com",
       "company": "Funkosauros LLC",
       "phone_numbers": {
@@ -74,7 +77,8 @@ module.exports = {
     },
     {
       "avatar_url": "http://www.st2299.com/data/wallpapers/64/wp-image-58446570.jpg",
-      "name": "Hayden Arends",
+      "first_name": "Hayden",
+      "last_name": "Arends",
       "email": "hayden.arends@gmail.com",
       "company": "Hayden Arrests U LLC",
       "phone_numbers": {
@@ -91,7 +95,8 @@ module.exports = {
     },
     {
       "avatar_url": "http://www.st2299.com/data/wallpapers/65/wp-image-58129842.jpg",
-      "name": "Layla Machado",
+      "first_name": "Layla",
+      "last_name": "Machado",
       "email": "layla.machado@gmail.com",
       "company": "Lay Mac N Cheese LLC",
       "phone_numbers": {
