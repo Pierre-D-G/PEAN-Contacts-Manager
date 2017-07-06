@@ -37,33 +37,25 @@ const Contact = sequelize.import(__dirname + "/models/contact.js");
 
 /* GET ALL CONTACTS. */
 router.get('/', (req, res) => {
-  pool.query('SELECT * FROM contacts_manager', function (err, result) {
-    if (err) {
-      console.log(err);
-      res.statusCode = 500;
-      return res.json({ errors: ['Could not retrieve contacts'] })
-    } else {
-      contacts = result.rows;
-      return res.json(contacts);
-    }
-  });
+  Contact.findAll().then(contacts => {
+    return res.json(contacts)
+  }).catch(err => {
+    return res.json({errors: ['Could not retrieve contacts']})
+  })
 });
 
 /* GET SINGLE CONTACT*/
 
 router.get('/contact/:id', (req, res) => {
-  pool.query('SELECT * FROM contacts_manager WHERE id=$1', [
-    req.params.id
-  ], function(err, result){
-    if(err){
-      console.log(err);
-      res.statusCode = 404;
-      return res.json({ errors: ['Could not find contact'] })
-    } else {
-      contact = result.rows;
-      return res.json(contact)
+  Contact.findOne({
+    where: {
+      id: req.params.id
     }
+  }).then(contact => {
+    return res.json(contact)
+  }).catch(err => {
+    return res.json({errors: ['Could not retrieve contact from the database']})
   })
-})
+});
 
 module.exports = router;
