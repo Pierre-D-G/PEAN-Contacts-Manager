@@ -38,8 +38,10 @@ const Contact = sequelize.import(__dirname + "/models/contact.js");
 /* GET ALL CONTACTS. */
 router.get('/', (req, res) => {
   Contact.findAll().then(contacts => {
+    // res.status(302);
     return res.json(contacts)
   }).catch(err => {
+    res.status(404);
     return res.json({ errors: ['Could not retrieve contacts'] })
   })
 });
@@ -52,8 +54,10 @@ router.get('/contact/:id', (req, res) => {
       id: req.params.id
     }
   }).then(contact => {
+    res.status(302);
     return res.json(contact)
   }).catch(err => {
+    res.status(404);
     return res.json({ errors: ['Could not retrieve contact from the database'] })
   })
 });
@@ -74,12 +78,12 @@ router.post('/contacts', (req, res) => {
     city: req.body.city,
     state: req.body.state,
     zip_code: req.body.zip_code
-  }).then(function(){
+  }).then(function () {
     res.status(201);
-    return res.json({"success": "Contact Created"})
+    return res.json({ "success": "Contact Created" })
   }).catch(err => {
     res.status(400);
-    return res.json({"error": "Bad Request" })
+    return res.json({ "error": "Bad Request" })
   })
 })
 
