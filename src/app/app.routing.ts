@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { ContactComponent } from './components/contacts/contact/contact.component'
+import { AddNewContactComponent } from './components/contacts/add-new-contact/add-new-contact.component';
 
 
 const routes: Routes = [
@@ -11,9 +13,16 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-      path:
-      'contacts',
+      path: 'contacts',
       component: ContactsComponent
+    },
+    {
+      path: 'contacts/contact/:id',
+      component: ContactComponent
+    },
+    {
+      path: 'contacts/new',
+      component: AddNewContactComponent
     }
 
 ];

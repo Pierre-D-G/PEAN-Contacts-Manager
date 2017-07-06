@@ -38,7 +38,7 @@ const Contact = sequelize.import(__dirname + "/models/contact.js");
 /* GET ALL CONTACTS. */
 router.get('/', (req, res) => {
   Contact.findAll().then(contacts => {
-    // res.status(302);
+    res.status(302);
     return res.json(contacts)
   }).catch(err => {
     res.status(404);

@@ -9,13 +9,19 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 
 import { ContactsAPIService } from './services/contacts-api.service';
+import { AddNewContactComponent } from './components/contacts/add-new-contact/add-new-contact.component';
+import { ContactComponent } from './components/contacts/contact/contact.component';
+import { EditContactComponent } from './components/contacts/edit-contact/edit-contact.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    NavigationComponent
+    NavigationComponent,
+    AddNewContactComponent,
+    ContactComponent,
+    EditContactComponent
   ],
   imports: [
     BrowserModule,
