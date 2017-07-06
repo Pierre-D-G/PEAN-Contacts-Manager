@@ -22,7 +22,7 @@ home, work and mobile phone
 street address
 city
 state
-country
+zip_code
 
 ## Getting Started
 
@@ -67,13 +67,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ### Front-End
 
 * Components 
- - Contacts Component - View all contacts
+ - ~~Contacts Component - View all contacts~~
  - Contact Component - View a contacts details
  - Form Component - Form to add,edit and delete a contact
 
 * Http Service
  - Service to connect to API
-  * API Call Get - `/api/contacts` - view all your contacts and a few details about them
+  * ~~API Call Get - `/api/contacts` - view all your contacts and a few details about them~~
   * API Call Get - `/api/contacts/contact/:id` - view all the details about a contact 
   * API Call Post - `/api/contacts` - Create a new contact
   * API Call Put - `/api/contacts/contact/:id` - Update a contact's details
