@@ -8,12 +8,13 @@ import { ContactsAPIService } from '../../services/contacts-api.service';
   providers: [ContactsAPIService]
 })
 export class ContactsComponent implements OnInit {
-
+  contacts: any = [];
   constructor(private _contactsAPIService: ContactsAPIService) { }
 
   ngOnInit() {
-    this._contactsAPIService.getContacts().subscribe(res => {
-      console.log(res)
+    this._contactsAPIService.getContacts().subscribe(contacts => {
+      this.contacts = contacts;
+      console.log(contacts);
     })
   }
 

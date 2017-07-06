@@ -1,3 +1,7 @@
-<p>
-  contacts works!
-</p>
+<div class="ui segment">
+  <div class="ui five stackable cards">
+    <div class="card" *ngFor="let contact of contacts">
+      <p>{{contact.id}}</p>
+    </div>
+  </div>
+</div>
