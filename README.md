@@ -16,17 +16,17 @@ PostgreSQL,Express,Angular and Node web application to manage your contacts feat
 
 ### Contact Details
 
-name
-email
-home, work and mobile phone
-street address
-city
-state
-zip_code
+name,
+email,
+home, work and mobile phone,
+street address,
+city,
+state,
+zip code
 
 ## Getting Started
 
-Download or clome the repository
+Download or clone the repository
 
 Run `npm install` to install dependancies
 
@@ -58,8 +58,8 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ### Backend
 
 * Routes
-  - ~~Get - `/api/contacts` - view all your contacts and a few details about them~~
-  - ~~Get - `/api/contacts/contact/:id` - view all the details about a contact~~ 
+  - Get - ~~`/api/contacts` - view all your contacts and a few details about them~~
+  - Get - ~~`/api/contacts/contact/:id` - view all the details about a contact~~ 
   - Post - `/api/contacts` - Create a new contact
   - Put - `/api/contacts/contact/:id` - Update a contact's details
   - Delete - `/api/contacts/contact/:id` - Delete a contact
@@ -73,8 +73,8 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 * Http Service
  - Service to connect to API
-  * ~~API Call Get - `/api/contacts` - view all your contacts and a few details about them~~
-  * API Call Get - `/api/contacts/contact/:id` - view all the details about a contact 
+  * API Call Get - ~~`/api/contacts` - view all your contacts and a few details about them~~
+  * API Call Get - ~~`/api/contacts/contact/:id` - view all the details about a contact~~
   * API Call Post - `/api/contacts` - Create a new contact
   * API Call Put - `/api/contacts/contact/:id` - Update a contact's details
   * API Call Delete - `/api/contacts/contact/:id` - Delete a contact
