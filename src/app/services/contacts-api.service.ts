@@ -14,4 +14,10 @@ export class ContactsAPIService {
     return this._http.get(this.apiURL)
               .map(res => res.json())
   }
+
+  getContact = (id: string) => {
+    this.apiURL = 'http://localhost:3000/api/contacts/contact/' + id;
+    return this._http.get(this.apiURL)
+              .map(res => res.json())
+  }
 }
