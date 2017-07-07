@@ -47,7 +47,7 @@ router.get('/', (req, res) => {
 
 /* GET SINGLE CONTACT*/
 
-router.get('/contact/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   Contact.findOne({
     where: {
       id: req.params.id

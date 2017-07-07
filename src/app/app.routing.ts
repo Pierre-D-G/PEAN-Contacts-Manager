@@ -17,7 +17,7 @@ const routes: Routes = [
       component: ContactsComponent
     },
     {
-      path: 'contacts/contact/:id',
+      path: 'contacts/:id',
       component: ContactComponent
     },
     {
@@ -25,7 +25,7 @@ const routes: Routes = [
       component: AddNewContactComponent
     },
     {
-      path: 'contacts/contact/:id/edit',
+      path: 'contacts/:id/edit',
       component: EditContactComponent
     }
 
