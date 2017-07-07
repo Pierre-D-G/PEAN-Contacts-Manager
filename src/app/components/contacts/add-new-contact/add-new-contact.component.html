@@ -1,3 +1,67 @@
-<p>
-  add-new-contact works!
-</p>
+<div class="ui segment">
+  <form class="ui form">
+    <h4 class="ui dividing header">Add a Contact</h4>
+    <div class="field">
+      <label>Name</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" name="first_name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" name="last_name" placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="six wide field">
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email Address">
+      </div>
+      <div class="six wide field">
+        <label>Company</label>
+        <input type="text" name="company" placeholder="Company">
+      </div>
+    </div>
+    <div class="field">
+      <label>Phone Numbers</label>
+      <div class="ui hidden divider"></div>
+      <div class="three fields">
+        <div class="field">
+          <label>Home</label>
+          <input type="tel" name="home_phone" placeholder="Home">
+        </div>
+        <div class="field">
+          <label>Mobile</label>
+          <input type="tel" name="mobile_phone" placeholder="Mobile">
+        </div>
+        <div class="field">
+          <label>Work</label>
+          <input type="tel" name="work_phone" placeholder="Work">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Location</label>
+      <div class="ui hidden divider"></div>
+      <div class="two fields">
+        <div class="ten wide field">
+          <input type="text" name="street_address" placeholder="Street Address">
+        </div>
+        <div class="four wide field">
+          <input type="text" name="zip_code" placeholder="Zip">
+        </div>
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="six wide field">
+        <label>City</label>
+        <input type="text" name="city" placeholder="City">
+      </div>
+    </div>
+    <div class="six wide field">
+      <label>State</label>
+      <input type="text" name="state" placeholder="State/Province">
+    </div>
+    <button type="submit" class="ui scheme button">Add Contact</button>
+  </form>
+</div>

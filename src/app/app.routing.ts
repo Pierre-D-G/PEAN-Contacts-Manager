@@ -17,12 +17,12 @@ const routes: Routes = [
       component: ContactsComponent
     },
     {
-      path: 'contacts/:id',
-      component: ContactComponent
-    },
-    {
       path: 'contacts/new',
       component: AddNewContactComponent
+    },
+    {
+      path: 'contacts/:id',
+      component: ContactComponent
     },
     {
       path: 'contacts/:id/edit',
