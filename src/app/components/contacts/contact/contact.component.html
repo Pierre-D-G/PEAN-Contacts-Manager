@@ -1,3 +1,45 @@
 <div class="ui segment" *ngIf="contact">
-  <p>{{contact.first_name}}</p>
+  <div class="ui centered grid">
+    <div class="fourteen wide mobile fourteen wide tablet six wide computer column">
+      <div class="image">
+        <img class="ui fluid image" src="{{contact.avatar_url}}" alt="contact profile image">
+      </div>
+    </div>
+    <div class="fourteen wide mobile fourteen wide tablet six wide computer column">
+      <div class="item">
+        <div class="ui center aligned block scheme large header">{{contact.first_name}} {{contact.last_name}}</div>
+        <div class="ui list">
+          <div class="item">
+            <div class="ui header">Phones</div>
+          </div>
+          <div class="item">Home: {{contact.home_phone}}</div>
+          <div class="item">Mobile: {{contact.mobile_phone}}</div>
+          <div class="item">Work: {{contact.work_phone}}</div>
+          <div class="ui fitted divider"></div>
+          <div class="item">
+            <div class="ui header">Company</div>
+          </div>
+          <div class="item">Company: {{contact.company}}</div>
+          <div class="ui fitted divider"></div>
+          <div class="item">
+            <div class="ui header">Email Address</div>
+          </div>
+          <div class="item">Email: <a href="mailto:{{contact.email}}">{{contact.email}}</a></div>
+          <div class="ui fitted divider"></div>
+          <div class="item">
+            <div class="ui header">Location</div>
+          </div>
+          <div class="item">Street: {{contact.street_address}}</div>
+          <div class="item">City: {{contact.city}}</div>
+          <div class="item">State/Provinence: {{contact.state}}</div>
+          <div class="item">Zip: {{contact.zip_code}}</div>
+        </div>
+        <div class="ui buttons">
+          <a href="contacts/{{contact.id}}/edit" class="ui positive button">Edit Contact</a>
+          <div class="or"></div>
+          <a class="ui negative button">Delete</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
