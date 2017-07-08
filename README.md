@@ -61,7 +61,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
   - Get - ~~`/api/contacts` - view all your contacts and a few details about them~~
   - Get - ~~`/api/contacts/:id` - view all the details about a contact~~ 
   - Post - ~~`/api/contacts` - Create a new contact~~
-  - Put - `/api/contacts/:id` - Update a contact's details
+  - Put - ~~`/api/contacts/:id` - Update a contact's details~~
   - Delete - `/api/contacts/:id` - Delete a contact
 
 ### Front-End
