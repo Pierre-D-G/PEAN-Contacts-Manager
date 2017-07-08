@@ -63,7 +63,6 @@ router.get('/:id', (req, res) => {
 // Add new Contact
 
 router.post('/', (req, res) => {
-  console.log(req.body)
   Contact.create({
     avatar_url: req.body.avatar_url,
     first_name: req.body.first_name,
@@ -79,6 +78,35 @@ router.post('/', (req, res) => {
     zip_code: req.body.zip_code
   }).then(function () {
     return res.json({ "success": "Contact Created" })
+  }).catch(err => {
+    res.status(400);
+    return res.json({ "error": "Bad Request" })
+  })
+});
+
+// Update a Contact's Details
+router.post('/:id', (req, res) => {
+  Contact.update({
+    avatar_url: req.body.avatar_url,
+    first_name: req.body.first_name,
+    last_name: req.body.last_name,
+    email: req.body.email,
+    company: req.body.company,
+    home_phone: req.body.home_phone,
+    mobile_phone: req.body.mobile_phone,
+    work_phone: req.body.work_phone,
+    street_address: req.body.street_address,
+    city: req.body.city,
+    state: req.body.state,
+    zip_code: req.body.zip_code
+  },
+    {
+      where: {
+        id: req.params.id
+      }
+    }
+  ).then(function () {
+    return res.json({ "success": "Updated contact's details" })
   }).catch(err => {
     res.status(400);
     return res.json({ "error": "Bad Request" })
