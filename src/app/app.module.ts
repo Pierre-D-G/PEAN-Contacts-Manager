@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http'
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app.routing';
 
@@ -26,7 +27,8 @@ import { EditContactComponent } from './components/contacts/edit-contact/edit-co
   imports: [
     BrowserModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ContactsAPIService],
   bootstrap: [AppComponent]

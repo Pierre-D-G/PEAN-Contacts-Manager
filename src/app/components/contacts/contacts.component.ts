@@ -4,7 +4,6 @@ import { ContactsAPIService } from '../../services/contacts-api.service';
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
-  styleUrls: ['./contacts.component.css'],
   providers: [ContactsAPIService]
 })
 export class ContactsComponent implements OnInit {

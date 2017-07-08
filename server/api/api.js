@@ -62,7 +62,8 @@ router.get('/:id', (req, res) => {
 
 // Add new Contact
 
-router.post('/contacts', (req, res) => {
+router.post('/', (req, res) => {
+  console.log(req.body)
   Contact.create({
     avatar_url: req.body.avatar_url,
     first_name: req.body.first_name,
