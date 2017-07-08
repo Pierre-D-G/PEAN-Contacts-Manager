@@ -29,4 +29,13 @@ export class ContactsAPIService {
     this.apiURL = 'http://localhost:3000/api/contacts';
     return this._http.post(this.apiURL, body, { headers: headers })
   }
+
+  updateContact = (contact, id) => {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+
+    let body = JSON.stringify(contact)
+    this.apiURL = 'http://localhost:3000/api/contacts/' + id;
+    return this._http.post(this.apiURL, body, { headers: headers })
+  }
 }
