@@ -60,7 +60,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 * Routes
   - Get - ~~`/api/contacts` - view all your contacts and a few details about them~~
   - Get - ~~`/api/contacts/:id` - view all the details about a contact~~ 
-  - Post - `/api/contacts` - Create a new contact
+  - Post - ~~`/api/contacts` - Create a new contact~~
   - Put - `/api/contacts/:id` - Update a contact's details
   - Delete - `/api/contacts/:id` - Delete a contact
 
@@ -68,14 +68,16 @@ Before running the tests make sure you are serving the app via `ng serve`.
 
 * Components 
  - ~~Contacts Component - View all contacts~~
- - Contact Component - View a contacts details
- - Form Component - Form to add,edit and delete a contact
+ - ~~Contact Component - View a contacts details
+ - Form Component
+    * ~~Add Contact Component - Form to add a new contact~~
+    * Edit Contact Component - Form to edit a contact's details
 
 * Http Service
  - Service to connect to API
   * API Call Get - ~~`/api/contacts` - view all your contacts and a few details about them~~
   * API Call Get - ~~`/api/contacts/:id` - view all the details about a contact~~
-  * API Call Post - `/api/contacts` - Create a new contact
+  * API Call Post - ~~`/api/contacts` - Create a new contact~~
   * API Call Put - `/api/contacts/:id` - Update a contact's details
   * API Call Delete - `/api/contacts/:id` - Delete a contact
 
