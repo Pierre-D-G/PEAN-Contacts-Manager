@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactsAPIService } from '../../services/contacts-api.service';
+import { Contact } from '../../models/contact';
 
 @Component({
   selector: 'app-contacts',
@@ -7,14 +8,19 @@ import { ContactsAPIService } from '../../services/contacts-api.service';
   providers: [ContactsAPIService]
 })
 export class ContactsComponent implements OnInit {
-  contacts: any = [];
+
+  contacts: Contact[];
+
   constructor(private _contactsAPIService: ContactsAPIService) { }
 
   ngOnInit() {
-    this._contactsAPIService.getContacts().subscribe(contacts => {
-      this.contacts = contacts;
-      console.log(contacts);
-    })
+    this._contactsAPIService.getContacts()
+      .then((contacts: Contact[]) => {
+        this.contacts = contacts.map((contact) => {
+          console.log(contact)
+          return contact
+        })
+      })
   }
 
 }

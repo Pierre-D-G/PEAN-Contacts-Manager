@@ -17,10 +17,10 @@ export class ContactsAPIService {
       .catch(this.handleErrors)
   }
 
-  getContact(id: string): Promise<Contact[]> {
+  getContact(id: string): Promise<any> {
     return this._http.get(this.apiURL + '/' + id)
       .toPromise()
-      .then(response => response.json() as Contact[])
+      .then(response => response.json() as any)
       .catch(this.handleErrors)
   }
 
@@ -35,7 +35,7 @@ export class ContactsAPIService {
       .catch(this.handleErrors)
   }
 
-  updateContact(putContact: Contact, id: string): Promise<Contact> {
+  updateContact(id: string, putContact: Contact): Promise<Contact> {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
 

@@ -85,7 +85,7 @@ router.post('/', (req, res) => {
 });
 
 // Update a Contact's Details
-router.post('/:id', (req, res) => {
+router.put('/:id', (req, res) => {
   Contact.update({
     avatar_url: req.body.avatar_url,
     first_name: req.body.first_name,

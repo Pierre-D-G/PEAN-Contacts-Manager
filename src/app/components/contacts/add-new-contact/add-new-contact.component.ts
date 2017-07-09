@@ -25,13 +25,13 @@ export class AddNewContactComponent implements OnInit {
   contact: Contact[];
 
   constructor(private _contactsAPIService: ContactsAPIService,
-              private _router: Router) { }
+    private _router: Router) { }
 
   ngOnInit() {
   }
 
   addContact() {
-    let newContact = {
+    let newContact: Contact = {
       first_name: this.first_name,
       last_name: this.last_name,
       email: this.email,
@@ -48,19 +48,15 @@ export class AddNewContactComponent implements OnInit {
 
 
 
-    this._contactsAPIService.saveContact(newContact)
-      .subscribe(data => {
-        console.log('added contact')
-        console.log(newContact)
+    this._contactsAPIService.createContact(newContact)
+      .then((data) => {
+        console.log('Added contact');
+        this._router.navigateByUrl('/');
         return true
       }, error => {
-        console.error('Error adding new contact')
+        console.error('Error adding new contact');
         return false
-      },
-      () => {
-        this._router.navigateByUrl('/')
       })
-
   }
 
 }

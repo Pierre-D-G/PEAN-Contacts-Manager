@@ -1,3 +1,71 @@
-<p>
-  edit-contact works!
-</p>
+<div class="ui segment">
+  <form class="ui form">
+    <h4 class="ui centered block scheme medium header">Add a Contact</h4>
+    <div class="field">
+      <label>Name</label>
+      <div class="two fields">
+        <div class="field">
+          <input type="text" [(ngModel)]="contact.first_name" name="first_name" placeholder="First Name">
+        </div>
+        <div class="field">
+          <input type="text" [(ngModel)]="contact.last_name" name="last_name"  placeholder="Last Name">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <div class="six wide field">
+        <label>Email</label>
+        <input type="email" [(ngModel)]="contact.email" name="email" placeholder="Email Address">
+      </div>
+      <div class="six wide field">
+        <label>Company</label>
+        <input type="text" [(ngModel)]="contact.company" name="company"  placeholder="Company">
+      </div>
+    </div>
+    <div class="field">
+      <label>Phone Numbers</label>
+      <div class="ui hidden divider"></div>
+      <div class="three fields">
+        <div class="field">
+          <label>Home</label>
+          <input type="tel" [(ngModel)]="contact.home_phone"  name="home_phone" placeholder="Home">
+        </div>
+        <div class="field">
+          <label>Mobile</label>
+          <input type="tel" [(ngModel)]="contact.mobile_phone"  name="mobile_phone" placeholder="Mobile">
+        </div>
+        <div class="field">
+          <label>Work</label>
+          <input type="tel" [(ngModel)]="contact.work_phone" name="work_phone" placeholder="Work">
+        </div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Location</label>
+      <div class="ui hidden divider"></div>
+      <div class="two fields">
+        <div class="ten wide field">
+          <input type="text" [(ngModel)]="contact.street_address" name="street_address" placeholder="Street Address">
+        </div>
+        <div class="four wide field">
+          <input type="text" [(ngModel)]="contact.zip_code" name="zip_code" placeholder="Zip">
+        </div>
+      </div>
+    </div>
+    <div class="two fields">
+      <div class="six wide field">
+        <label>City</label>
+        <input type="text" [(ngModel)]="contact.city" name="city" placeholder="City">
+      </div>
+    </div>
+    <div class="six wide field">
+      <label>State</label>
+      <input type="text" [(ngModel)]="contact.state" name="state" placeholder="State/Province">
+    </div>
+    <div class="four wide field">
+      <label>Contact Image</label>
+      <input type="url" [(ngModel)]="contact.avatar_url" name="avatar_url" placeholder="Enter url of desired  contact image">
+    </div>
+    <input type="submit" class="ui scheme button" (click)="editContact()">
+  </form>
+</div>
