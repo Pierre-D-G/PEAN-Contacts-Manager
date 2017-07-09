@@ -119,7 +119,7 @@ router.delete('/:id', (req,res) =>{
       id: req.params.id
     }
   }).then(function() {
-    return res.json({ "success": "Updated contact's details" })
+    return res.json({ "success": "Deleted contact's details" })
   }).catch(err => {
     res.status(404);
     return res.json({ "error": "Contact not found" })
