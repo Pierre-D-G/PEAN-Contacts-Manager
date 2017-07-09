@@ -1,16 +1,14 @@
 export class Contact {
-  constructor(
-    public first_name: string,
-    public last_name: string,
-    public email: string,
-    public company: string,
-    public avatar_url: string,
-    public home_phone: string,
-    public mobile_phone: string,
-    public work_phone: string,
-    public street_address: string,
-    public city: string,
-    public state: string,
-    public zip_code: string
-  ) { }
+  first_name: string;
+  last_name: string;
+  email: string;
+  company: string;
+  avatar_url: string;
+  home_phone: string;
+  mobile_phone: string;
+  work_phone: string;
+  street_address: string;
+  city: string;
+  state: string;
+  zip_code: string;
 }
