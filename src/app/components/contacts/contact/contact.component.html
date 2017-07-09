@@ -37,7 +37,7 @@
         <div class="ui buttons">
           <a href="contacts/{{contact.id}}/edit" class="ui positive button">Edit Contact</a>
           <div class="or"></div>
-          <a class="ui negative button">Delete</a>
+          <a class="ui negative button" (click)="deleteContact(contact.id)">Delete</a>
         </div>
       </div>
     </div>

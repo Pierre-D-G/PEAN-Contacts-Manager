@@ -3,7 +3,7 @@ import 'rxjs/add/operator/map';
 import { ContactsAPIService } from '../../../services/contacts-api.service';
 import { Contact } from '../../../models/contact';
 
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +13,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ContactComponent implements OnInit {
   contact: Contact[];
   constructor(private _contactsAPIService: ContactsAPIService,
-    private _route: ActivatedRoute) { }
+    private _route: ActivatedRoute,
+    private _router: Router) { }
 
   ngOnInit() {
     this._route.params
@@ -27,5 +28,14 @@ export class ContactComponent implements OnInit {
           })
       }
       )
+  }
+
+  deleteContact(id) {
+    this._contactsAPIService.deleteContact(id)
+      .then((response) => {
+        console.log('Deleted Contact')
+        this._router.navigateByUrl('/');
+
+      })
   }
 }
