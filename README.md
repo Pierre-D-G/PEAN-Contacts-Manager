@@ -71,13 +71,13 @@ Before running the tests make sure you are serving the app via `ng serve`.
  - ~~Contact Component - View a contacts details
  - Form Component
     * ~~Add Contact Component - Form to add a new contact~~
-    * Edit Contact Component - Form to edit a contact's details
+    * ~~Edit Contact Component - Form to edit a contact's details~~
 
 * Http Service
  - Service to connect to API
   * API Call Get - ~~`/api/contacts` - view all your contacts and a few details about them~~
   * API Call Get - ~~`/api/contacts/:id` - view all the details about a contact~~
   * API Call Post - ~~`/api/contacts` - Create a new contact~~
-  * API Call Put - `/api/contacts/:id` - Update a contact's details
+  * API Call Put - ~~`/api/contacts/:id` - Update a contact's details~~
   * API Call Delete - `/api/contacts/:id` - Delete a contact
 
