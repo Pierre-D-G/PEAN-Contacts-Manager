@@ -1,21 +1,6 @@
-const Sequelize = require('sequelize');
-const config = require('../../config');
-const sequelize = new Sequelize(config.database, config.username, config.password, {
-  host: 'localhost',
-  dialect: 'postgres',
-
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
-  },
-});
-const Contact = sequelize.import(__dirname + "/models/contact.js");
-
-module.exports = {
-  
-  seedDb: function() {
-    Contact.bulkCreate([{
+[
+    {
+        "id": 1,
         "first_name": "Patrick",
         "last_name": "Dessler",
         "email": "patrick.dess@gmail.com",
@@ -27,9 +12,12 @@ module.exports = {
         "street_address": "123 6th St.",
         "city": "Melbourne",
         "state": "Florida",
-        "zip_code": "32904"
+        "zip_code": "32904",
+        "createdAt": "2017-07-06T02:31:39.576Z",
+        "updatedAt": "2017-07-06T02:31:39.576Z"
     },
     {
+        "id": 3,
         "first_name": "Jeanette",
         "last_name": "Funke",
         "email": "jeanette.funke@gmail.com",
@@ -41,9 +29,12 @@ module.exports = {
         "street_address": "71 Pilgrim Avenue",
         "city": "Chevy Chase",
         "state": "Maryland",
-        "zip_code": "20815"
+        "zip_code": "20815",
+        "createdAt": "2017-07-06T02:31:40.519Z",
+        "updatedAt": "2017-07-06T02:31:40.519Z"
     },
     {
+        "id": 4,
         "first_name": "Hayden",
         "last_name": "Arends",
         "email": "hayden.arends@gmail.com",
@@ -55,9 +46,12 @@ module.exports = {
         "street_address": "44 Shirley Ave. ",
         "city": "West Chicago",
         "state": "Illinois",
-        "zip_code": "60185"
+        "zip_code": "60185",
+        "createdAt": "2017-07-06T02:31:40.573Z",
+        "updatedAt": "2017-07-06T02:31:40.573Z"
     },
     {
+        "id": 5,
         "first_name": "Layla",
         "last_name": "Machado",
         "email": "layla.machado@gmail.com",
@@ -69,9 +63,12 @@ module.exports = {
         "street_address": "70 Bowman St.",
         "city": "South Windsor",
         "state": "Connecticut",
-        "zip_code": "06074"
+        "zip_code": "06074",
+        "createdAt": "2017-07-06T02:31:40.630Z",
+        "updatedAt": "2017-07-06T02:31:40.630Z"
     },
     {
+        "id": 6,
         "first_name": "Lani",
         "last_name": "Graffan",
         "email": "lani.graffan@gmail.com",
@@ -84,8 +81,28 @@ module.exports = {
         "city": "Sykesville",
         "state": "Maryland",
         "zip_code": "26252",
+        "createdAt": "2017-07-08T01:28:22.148Z",
+        "updatedAt": "2017-07-08T01:28:22.148Z"
     },
     {
+        "id": 7,
+        "first_name": "Keith",
+        "last_name": "Hibbs",
+        "email": "keith.hibbs@gmail.com",
+        "avatar_url": "http://www.st2299.com/data/wallpapers/65/wp-image-58065399.jpg",
+        "company": "Kelloggs LLC",
+        "home_phone": "123-4567",
+        "mobile_phone": "234-5678",
+        "work_phone": "345-6789",
+        "street_address": "743 Studebaker Street ",
+        "city": "Rome",
+        "state": "New York",
+        "zip_code": "13440",
+        "createdAt": "2017-07-09T01:26:27.049Z",
+        "updatedAt": "2017-07-09T01:26:27.049Z"
+    },
+    {
+        "id": 2,
         "first_name": "Kurtis",
         "last_name": "Karner",
         "email": "k.karner@gmail.com",
@@ -98,13 +115,7 @@ module.exports = {
         "city": "Los Angelos",
         "state": "California",
         "zip_code": "96815",
-    }])
-  },
-
-  clearDatabase: function () {
-        Contact.destroy({
-            where: {}
-        })
-    },
-
-} 
+        "createdAt": "2017-07-06T02:31:40.348Z",
+        "updatedAt": "2017-07-09T13:19:17.244Z"
+    }
+]

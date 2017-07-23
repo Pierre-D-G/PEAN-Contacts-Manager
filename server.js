@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const http = require('http');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 // Get our API routes
 const api = require('./server/api/api');
@@ -25,11 +26,19 @@ app.use(function(req, res, next) {
 app.use(express.static(path.join(__dirname, 'dist')));
 
 // Set our api routes
-app.use('/api/contacts', api);
+app.route('/api/contacts')
+  .get(api.getContacts)
+  .post(api.addContact);
+
+app.route('/api/contacts/:id')
+  .get(api.GetContact)
+  .put(api.updateContact)
+  .delete(api.deleteContact);
 
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
+  // res.sendFile(path.join(__dirname, 'dist/index.html'));
+  res.redirect('/api/contacts')
 });
 
 /**
@@ -43,3 +52,5 @@ const server = http.createServer(app);
 
 
 server.listen(port, () => console.log(`API running on localhost:${port}`));
+
+module.exports = app 
